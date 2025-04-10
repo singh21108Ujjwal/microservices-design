@@ -11,5 +11,4 @@ public class PhotoAppDiscoveryServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PhotoAppDiscoveryServiceApplication.class, args);
 	}
-
 }
