@@ -45,7 +45,7 @@ public class WebSecurity {
         httpSecurity
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers(new AntPathRequestMatcher("/user")).access(
+                        .requestMatchers(new AntPathRequestMatcher("/user/**")).access(
                                 new WebExpressionAuthorizationManager(
                                         "hasIpAddress('" + environment.getProperty("gateway-ip") + "')"
                                 )
